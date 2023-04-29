@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+// import "bootstrap/dist/css/bootstrap.min.css";
 
-function App() {
+import { AppProvider } from "./context/AppContext";
+import CartValue from "./components/CartValue";
+import ExpenseList from "./components/ExpenseList";
+import ItemSelected from "./components/ItemSelected";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppProvider>
+      <div className="container">
+        <h1 className="mt-3">Menuu</h1>
+        <div className="row mt-3">
+          <div className="col-sm">
+            <CartValue />
+          </div>
+        </div>
+        <h3 className="mt-3">Shopping Cart</h3>
+        <div className="row ">
+          <div className="col-sm">
+            <ExpenseList />
+          </div>
+        </div>
+        <h3 className="mt-3">Add Items</h3>
+        <div className="row mt-3">
+          <div className="col-sm">
+            <ItemSelected />
+          </div>
+        </div>
+      </div>
+    </AppProvider>
   );
-}
-
+};
 export default App;
