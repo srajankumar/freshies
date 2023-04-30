@@ -16,11 +16,13 @@ export const AppReducer = (state, action) => {
     case "REDUCE_QUANTITY":
       return {
         ...state,
-        expenses: state.expenses.map((item) =>
-          item.name === action.payload.name
-            ? { ...item, quantity: item.quantity - 1 }
-            : item
-        ),
+        expenses: state.expenses.map((item) => {
+          if (item.name === action.payload.name && item.quantity > 0) {
+            return { ...item, quantity: item.quantity - 1 };
+          } else {
+            return item;
+          }
+        }),
       };
 
     case "DELETE_ITEM":

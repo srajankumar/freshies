@@ -41,36 +41,47 @@ const ExpenseItem = (props) => {
   };
 
   return (
-    <tr>
-      <td>{props.name}</td>
-      <td>{props.quantity}</td>
-      <td>
-        {Currency}
-        {parseInt(props.unitprice)}
+    <div>
+      <div
+        class="list-group-item list-group-item-action active"
+        aria-current="true"
+      >
+        <div class="d-flex w-100px justify-content-between">
+          <h5 class="mb-1">{props.name}</h5>
+          <small>
+            {Currency}
+            {parseInt(props.unitprice)}
+          </small>
+        </div>
+        <p class="mb-1">Some placeholder content in a paragraph.</p>
+        <small>
+          <div>{props.quantity}</div>
+          <button
+            type="button"
+            class="btn btn-success"
+            onClick={(event) => increaseAllocation(props.name)}
+          >
+            +
+          </button>
+          <button
+            type="button"
+            class="btn btn-danger"
+            onClick={(event) => decreaseAllocation(props.name)}
+          >
+            -
+          </button>
+        </small>
+      </div>
+      <tr>
+        {/* <td>
+        <button size="2.2em" color="red" onClick={handleDeleteItem}></button>
       </td>
       <td>
         {Currency}
         {parseInt(props.quantity) * parseInt(props.unitprice)}
-      </td>
-      <td>
-        <button
-          size="1.5em"
-          color="green"
-          onClick={(event) => increaseAllocation(props.name)}
-        ></button>
-      </td>
-      <td>
-        <button
-          size="1.5em"
-          color="red"
-          onClick={(event) => decreaseAllocation(props.name)}
-        ></button>
-      </td>
-
-      <td>
-        <button size="2.2em" color="red" onClick={handleDeleteItem}></button>
-      </td>
-    </tr>
+      </td> */}
+      </tr>
+    </div>
   );
 };
 
