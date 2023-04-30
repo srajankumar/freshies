@@ -28,7 +28,7 @@ npm install
 npm start
 ```
 
-4. The running the commands should redirect to your browser.
+4. Running the commands should redirect to your browser.
 
 ## Authors
 
