@@ -11,37 +11,28 @@ const CartValue = () => {
 
   return (
     <div>
-      <table>
-        <thead>
-          <tr>
-            <th>Item Name</th>
-            <th>Quantity</th>
-            <th>Unit Price</th>
-            <th>Total Price</th>
-          </tr>
-        </thead>
-        <tbody>
-          {filteredExpenses.map((item, index) => (
-            <tr key={index}>
-              <td>{item.name}</td>
-              <td>{item.quantity}</td>
-              <td>
-                {Currency}
-                {item.unitprice}
-              </td>
-              <td>
+      {filteredExpenses.map((item, index) => (
+        <div>
+          <div
+            class="list-group-item list-group-item-action active"
+            aria-current="true"
+          >
+            <div class="d-flex w-100px justify-content-between">
+              <h4 class="mb-1">
+                {item.quantity} {item.name}
+              </h4>
+              <small>
                 {Currency}
                 {item.unitprice * item.quantity}
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-      <div className="alert alert-primary">
-        <span>
-          Cart Value: {Currency}
-          {totalExpenses}
-        </span>
+              </small>
+            </div>
+          </div>
+        </div>
+      ))}
+
+      <div className="total">
+        Total: {Currency}
+        {totalExpenses}
       </div>
     </div>
   );

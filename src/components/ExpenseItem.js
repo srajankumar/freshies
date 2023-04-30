@@ -41,8 +41,9 @@ const ExpenseItem = (props) => {
   };
 
   return (
-    <div>
+    <div className="mainn">
       <div
+        id="element"
         class="list-group-item list-group-item-action active"
         aria-current="true"
       >
@@ -53,34 +54,31 @@ const ExpenseItem = (props) => {
             {parseInt(props.unitprice)}
           </small>
         </div>
-        <p class="mb-1">Some placeholder content in a paragraph.</p>
-        <small>
-          <div>{props.quantity}</div>
-          <button
-            type="button"
-            class="btn btn-success"
-            onClick={(event) => increaseAllocation(props.name)}
+        <p class="mb-1">{props.info}</p>
+        <div>
+          <div
+            class="btn-group"
+            role="group"
+            aria-label="Basic mixed styles example"
           >
-            +
-          </button>
-          <button
-            type="button"
-            class="btn btn-danger"
-            onClick={(event) => decreaseAllocation(props.name)}
-          >
-            -
-          </button>
-        </small>
+            <button
+              className="btn"
+              onClick={(event) => decreaseAllocation(props.name)}
+            >
+              -
+            </button>
+
+            <button className="btn">{props.quantity}</button>
+
+            <button
+              className="btn"
+              onClick={(event) => increaseAllocation(props.name)}
+            >
+              +
+            </button>
+          </div>
+        </div>
       </div>
-      <tr>
-        {/* <td>
-        <button size="2.2em" color="red" onClick={handleDeleteItem}></button>
-      </td>
-      <td>
-        {Currency}
-        {parseInt(props.quantity) * parseInt(props.unitprice)}
-      </td> */}
-      </tr>
     </div>
   );
 };

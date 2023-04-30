@@ -1,6 +1,5 @@
 import React, { createContext, useReducer } from "react";
 
-// 5. The reducer - this is used to update the state, based on the action
 export const AppReducer = (state, action) => {
   let new_expenses = [];
   switch (action.type) {
@@ -24,7 +23,6 @@ export const AppReducer = (state, action) => {
           }
         }),
       };
-
     case "DELETE_ITEM":
       state.expenses.map((expense) => {
         if (expense.name === action.payload.name) {
@@ -38,31 +36,90 @@ export const AppReducer = (state, action) => {
       return {
         ...state,
       };
-
     default:
       return state;
   }
 };
 
-// 1. Sets the initial state when the app loads
 const initialState = {
   expenses: [
-    { id: "Shirt", name: "Shirt", quantity: 0, unitprice: 500 },
-    { id: "Jeans", name: "Jeans", quantity: 0, unitprice: 300 },
-    { id: "Dress", name: "Dress", quantity: 0, unitprice: 400 },
-    { id: "Dinner set", name: "Dinner set", quantity: 0, unitprice: 600 },
-    { id: "Bags", name: "Bags", quantity: 0, unitprice: 200 },
+    {
+      id: "Strawberry Banana",
+      name: "Strawberry Banana",
+      quantity: 0,
+      unitprice: 149,
+      info: "Strawberries, bananas, and milk",
+    },
+    {
+      id: "Mango Madness",
+      name: "Mango Madness",
+      quantity: 0,
+      unitprice: 169,
+      info: "Mango, banana, orange juice, and milk",
+    },
+    {
+      id: "Cherry Almond",
+      name: "Cherry Almond",
+      quantity: 0,
+      unitprice: 159,
+      info: "Cherries, almond milk, banana, and coconut",
+    },
+    {
+      id: "Island Breeze",
+      name: "Island Breeze",
+      quantity: 0,
+      unitprice: 129,
+      info: "Pineapple, banana, yogurt, coconut, orange juice, and honey",
+    },
+    {
+      id: "Tropical Sunset",
+      name: "Tropical Sunset",
+      quantity: 0,
+      unitprice: 149,
+      info: "Pineapple, banana, mango, fresh orange juice, lime, and honey",
+    },
+    {
+      id: "Berry Blast",
+      name: "Berry Blast",
+      quantity: 0,
+      unitprice: 149,
+      info: "Mixed berries, banana, almond milk, and honey",
+    },
+    {
+      id: "Green Goddess",
+      name: "Green Goddess",
+      quantity: 0,
+      unitprice: 169,
+      info: "Spinach, banana, mango, pineapple, and coconut water",
+    },
+    {
+      id: "Peach Perfection",
+      name: "Peach Perfection",
+      quantity: 0,
+      unitprice: 149,
+      info: "Peach, banana, almond milk, and honey",
+    },
+    {
+      id: "Citrus Cooler",
+      name: "Citrus Cooler",
+      quantity: 0,
+      unitprice: 149,
+      info: "Orange, grapefruit, banana, and coconut water",
+    },
+    {
+      id: "Sunrise Surprise",
+      name: "Sunrise Surprise",
+      quantity: 0,
+      unitprice: 149,
+      info: "Mango, banana, orange juice, and yogurt",
+    },
   ],
   Currency: "₹",
 };
 
-// 2. Creates the context this is the thing our components import and use to get the state
 export const AppContext = createContext();
 
-// 3. Provider component - wraps the components we want to give access to the state
-// Accepts the children, which are the nested(wrapped) components
 export const AppProvider = (props) => {
-  // 4. Sets up the app state. takes a reducer, and an initial state
   const [state, dispatch] = useReducer(AppReducer, initialState);
 
   const totalExpenses = state.expenses.reduce((total, item) => {

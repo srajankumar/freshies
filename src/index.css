@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap");
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -12,24 +13,107 @@ code {
     monospace;
 }
 
-td {
-  padding: 1rem 3rem 1rem 3rem;
-  background: pink;
+#mainbody {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem;
 }
 
-.tablehead th {
-  background: yellow;
-  width: 5rem;
+.mainn {
+  padding: 1rem 0 1rem 0;
 }
 
-table {
+#element {
+  /* padding: 0 1rem 0 1rem; */
+}
+
+#mainbody {
+  /* background-color: #cff4d2; */
+
+  background-image: linear-gradient(to right, #e0c8c6, #e0d6d8);
+}
+
+#mainbody h5 {
+  color: #329d9c;
+  font-weight: 800;
+}
+
+button {
+  color: #337995 !important;
+}
+
+#mainbody p {
+  color: #205072;
+  font-weight: 500;
+}
+small {
+  color: #6f9bb4;
+  font-weight: 500;
+}
+
+#mainbody h1 {
+  font-weight: 900;
+  font-size: 4rem;
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  color: #337995;
+  font-family: "Calligraffitti", cursive;
 }
 
-tr {
-  padding: 1rem 3rem 1rem 3rem;
-  background: pink;
+#mainbody h6 {
+  display: flex;
+  font-size: 20px;
+  color: #6f9bb4;
+  justify-content: center;
+  font-weight: 800;
+  font-family: "Calligraffitti", cursive;
+  padding: 0 0 2rem 0;
+}
+
+#mainbody h3 {
+  display: flex;
+  font-size: 30px;
+  color: #6f9bb4;
+  font-weight: 800;
+  font-family: "Calligraffitti", cursive;
+  padding: 0 0 1rem 0;
+}
+
+#mainbody h4 {
+  color: #329d9c;
+  padding: 0 0 1rem 0;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+#mainbody .total {
+  display: flex;
+  padding: 1rem;
+  color: #337995;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+#mainbody .footer {
+  display: flex;
+  font-size: 25px;
+  color: #6f9bb4;
+  padding: 2rem 0 0 0;
+}
+
+#mainbody .footer2 h6 {
+  color: #6f9bb4;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  display: flex;
+  padding: 2rem 0 0 0;
+  width: 100%;
+  font-size: 1rem;
+  text-decoration: none;
+  justify-content: center;
+}
+
+#mainbody .footer2 a {
+  text-decoration: none;
 }

@@ -9,10 +9,9 @@ import ItemSelected from "./components/ItemSelected";
 const App = () => {
   return (
     <AppProvider>
-      <div>
-        <h1>Menuu</h1>
-
-        <h3>Shopping Cart</h3>
+      <div id="mainbody">
+        <h1>Freshies</h1>
+        <h6>Smoothies fresher than ever</h6>
 
         <div>
           <div>
@@ -21,12 +20,18 @@ const App = () => {
         </div>
 
         <div>
+          <h3>Selected Items</h3>
           <div>
             <CartValue />
           </div>
         </div>
 
-        <h3>Thanks For Shopping??</h3>
+        <h6 className="footer">Bon Appetit!</h6>
+        <div className="footer2">
+          <a href="https://github.com/srajankumar" target="_blank">
+            <h6>source_code</h6>
+          </a>
+        </div>
       </div>
     </AppProvider>
   );
