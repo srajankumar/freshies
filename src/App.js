@@ -1,10 +1,7 @@
 import React from "react";
-// import "bootstrap/dist/css/bootstrap.min.css";
-
 import { AppProvider } from "./context/AppContext";
 import CartValue from "./components/CartValue";
 import ExpenseList from "./components/ExpenseList";
-import ItemSelected from "./components/ItemSelected";
 
 const App = () => {
   return (
@@ -12,23 +9,23 @@ const App = () => {
       <div id="mainbody">
         <h1>Freshies</h1>
         <h6>Smoothies fresher than ever</h6>
-
         <div>
           <div>
             <ExpenseList />
           </div>
         </div>
-
         <div>
           <h3>Selected Items</h3>
           <div>
             <CartValue />
           </div>
         </div>
-
         <h6 className="footer">Bon Appetit!</h6>
         <div className="footer2">
-          <a href="https://github.com/srajankumar" target="_blank">
+          <a
+            href="https://github.com/srajankumar/freshies-menu"
+            target="_blank"
+          >
             <h6>source_code</h6>
           </a>
         </div>
