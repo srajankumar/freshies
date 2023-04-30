@@ -1,6 +1,6 @@
 # Freshies
 
-Imagine going out with a large group of friends and enjoying a fun-filled day together. Everyone's having a great time and suddenly, hunger strikes! As the responsible one in the group, you take everyone's orders, but wait, did you miss someone's order? 
+Imagine going out with a large group of friends and enjoying a fun-filled day together. Everyone's having a great time and suddenly, thirst strikes! As the responsible one in the group, you take everyone's orders, but wait, did you miss someone's order?
 
 ## Features
 
